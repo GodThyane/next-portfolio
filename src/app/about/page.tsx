@@ -166,7 +166,10 @@ const AboutPage = () => {
                     <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
                         <TitleAnimated value="habilidades" refInView={isSkillRefInView}/>
                         {/*SKILL GRID*/}
-                        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 2xl:gap-12">
+                        <motion.div
+                            initial={{x: "-350px"}}
+                            animate={isSkillRefInView ? {x: 0} : {}}
+                            className="grid grid-cols-1 gap-10 sm:grid-cols-2 2xl:gap-12">
                             {/*SKIL FRONTEND*/}
                             <Skill value="Frontend" skills={frontendSkills}/>
                             {/*SKILL BACKEND*/}
@@ -175,7 +178,7 @@ const AboutPage = () => {
                             <Skill value="Aprendiendo" skills={learningSkills}/>
                             {/*SKILL TOOLS*/}
                             <Skill value="Herramientas" skills={tools}/>
-                        </div>
+                        </motion.div>
                         {/* <motion.div initial={{x: "-350px"}}
                                     animate={isSkillRefInView ? {x: 0} : {}}
                         >

@@ -39,7 +39,7 @@ const works: WorkProps[] = [
         id: 3,
         color: "from-violet-300 to-red-300",
         description: "Aplicación para gestionar fiestas y eventos, cuenta con un sistema de suscripción y pagos. Utiliza Angular.",
-        img: "/farrapp.png",
+        img: "/FarrApp.png",
         link: "https://github.com/GodThyane/farrapp-front",
         title: "FarrApp",
         demo: false
