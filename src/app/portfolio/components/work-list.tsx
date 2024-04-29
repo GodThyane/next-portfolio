@@ -26,6 +26,13 @@ const WorkListComponent = ({works, x}: WorkListComponentProps) => {
                         <div
                             className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
                             <Image src={work.img} alt={work.title} fill/>
+                            <div className={`absolute ${work.techBgColor} bottom-0 w-full flex gap-2 p-2`}>
+                                {work.technologies?.map((tech) => (
+                                    <button
+                                        className={'border-white font-semibold border-2 p-1 text-xs rounded-md bg-white text-black hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer'}
+                                        key={tech}>{tech}</button>
+                                ))}
+                            </div>
                         </div>
                         <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">{work.description}</p>
                         <Link href={work.link} className="flex justify-end" target="_blank">

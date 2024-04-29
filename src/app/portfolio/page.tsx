@@ -14,35 +14,54 @@ export interface WorkProps {
     img: string,
     link: string,
     demo: boolean
+    technologies?: string[]
+    techBgColor?: string
 }
 
 const works: WorkProps[] = [
     {
         id: 1,
         color: "from-red-300 to-blue-300",
-        description: "Aplicación web para el registro de entradas de plantas, con la posibilidad de ver las entradas de otros usuarios. Utiliza generación estática y SSR.",
-        img: "/goma-entries.png",
-        link: "https://goma-entries.vercel.app",
-        title: "Goma Entries",
-        demo: true
+        description: "Aplicación web para la gestión de tareas, con la posibilidad de crear tableros y tarjetas. Utiliza autenticación con Clerk y pagos con Stripe.",
+        img: "/Trellis.png",
+        link: "https://next14-trellis.vercel.app",
+        title: "Trellis",
+        demo: true,
+        technologies: ['NextJs', 'Clerk', 'Tailwind', 'Stripe', 'Drag & Drop'],
+        techBgColor: "bg-red-300/50"
     },
     {
         id: 2,
         color: "from-blue-300 to-violet-300",
+        description: "Aplicación web para el registro de entradas de plantas, con la posibilidad de ver las entradas de otros usuarios. Utiliza generación estática y SSR.",
+        img: "/goma-entries.png",
+        link: "https://goma-entries.vercel.app",
+        title: "Goma Entries",
+        demo: true,
+        technologies: ['NextJs', 'ContentFul', 'Firestore'],
+        techBgColor: "bg-blue-300/50"
+    },
+    {
+        id: 3,
+        color: "from-violet-300 to-violet-300",
         description: "Pokedex con generación estática, utilizando la API de Pokemon. Se puede ver la información de los primeros 150 pokemon y añadir a favoritos.",
         img: "/pokedex-static.png",
         link: "https://pokemon-static-ashy-nine.vercel.app",
         title: "Pokedex Static",
-        demo: true
+        demo: true,
+        technologies: ['NextJs', 'Pokemon API'],
+        techBgColor: "bg-violet-300/50"
 
     }, {
-        id: 3,
-        color: "from-violet-300 to-red-300",
+        id: 4,
+        color: "from-blue-300 to-red-300",
         description: "Aplicación para gestionar fiestas y eventos, cuenta con un sistema de suscripción y pagos. Utiliza Angular.",
         img: "/FarrApp.png",
         link: "https://github.com/GodThyane/farrapp-front",
         title: "FarrApp",
-        demo: false
+        demo: false,
+        technologies: ['Angular', 'Bootstrap'],
+        techBgColor: "bg-blue-300/50"
     }
 ]
 
@@ -51,11 +70,11 @@ const PortfolioPage = () => {
     const ref = useRef<HTMLDivElement>(null);
 
     const {scrollYProgress} = useScroll({target: ref});
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
     return (
         <MainTransition>
-            <div className="h-[500vh] relative" ref={ref}>
+            <div className="h-[600vh] relative" ref={ref}>
                 <div
                     className=" w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-4xl sm:text-6xl lg:text-8xl text-center">
                     Mi Trabajo
