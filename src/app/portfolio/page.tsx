@@ -43,7 +43,7 @@ const works: WorkProps[] = [
     },
     {
         id: 3,
-        color: "from-violet-300 to-violet-300",
+        color: "from-violet-300 to-blue-300",
         description: "Pokedex con generación estática, utilizando la API de Pokemon. Se puede ver la información de los primeros 150 pokemon y añadir a favoritos.",
         img: "/pokedex-static.png",
         link: "https://pokemon-static-ashy-nine.vercel.app",
