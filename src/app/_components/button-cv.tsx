@@ -4,7 +4,7 @@ import React from 'react';
 
 const ButtonCv = () => {
     const downloadCV = () => {
-        window.open("/JoseIsmael_DazaDiaz_CV.pdf");
+        window.open("/José Daza Díaz CVV.pdf");
     }
 
     return (
